@@ -224,61 +224,38 @@ def attr2act(attributes, type = "act"):
     return activity_sequence, id_
 
 
-def significant_test1( acts_timesacts,):
-    clusters = len(acts)
-    maybe_event = {}
-    maybe_event[0] = {}
-    acts = [[] for i in range(len(group_members))]
-    if len(group_members)>1:
-        for i in range(len(group_members)):
-            if i!=0:
-                act_times[i] = {}
-    activities = []
-    must_be_event_group1 = []
-    must_be_event_group2 = []
-    must_be_event_groupboth = []
-    for a in acts1:
-        if acts2times.has_key(a):
-            if acts1times[a] >= 92:
-                if acts2times[a] >= 30:
-                    must_be_event_groupboth.append(a)
-                else:
-                    must_be_event_group1.append(a)
-            elif acts2times[a] >= 30:
-                must_be_event_group2.append(a)
-            else:
-                p = p_value(zscore_calculator(acts1times[a], 92, acts2times[a], 30))
-                maybe_event[a] = p
-                activities.append(a)
-    return maybe_event, activities, must_be_event_group1, must_be_event_group2, must_be_event_groupboth
-
-
-def significant_test(acts_times, acts):
+def significant_test(act_times, acts, group_members):
     clusters = len(acts)
     must_be_event_group = [[]for i in range(clusters)]
     # n-dimesional dictionaries
-
     maybe_event = {}
     maybe_event[0] = {}
+    activities = [[]for i in range(clusters)]
     if len(group_members)>1:
         for i in range(len(group_members)):
             if i!=0:
-                act_times[i] = {}
-    for n in range(clusters):
-        for a in acts1:
-            if acts2times.has_key(a):
-                if acts1times[a] >= 92:
-                    if acts2times[a] >= 30:
-                        must_be_event_groupboth.append(a)
-                    else:
-                        must_be_event_group1.append(a)
-                elif acts2times[a] >= 30:
-                    must_be_event_group2.append(a)
-                else:
-                    p = p_value(zscore_calculator(acts1times[a], 92, acts2times[a], 30))
-                    maybe_event[a] = p
-                    activities.append(a)
-    return maybe_event, activities, must_be_event_group1, must_be_event_group2, must_be_event_groupboth
+                maybe_event[i] = {}
+
+    # calculate act times total
+    act_times_total = {}
+    for i in range(clusters):
+        for a in acts[i]:
+            if act_times_total.has_key(a):
+                act_times_total[a] = act_times_total[a] + act_times[i][a]
+            else:
+                act_times_total[a] = act_times[i][a]
+
+    for i in range(clusters):
+        for a in acts[i]:
+            if act_times_total[a] != act_times[i][a] \
+                    and act_times_total[a]-act_times[i][a]< 122-len(group_members[i]) \
+                    and act_times[i][a] < len(group_members[i]):
+                p = p_value(zscore_calculator(act_times[i][a], len(group_members[i]),
+                                              act_times_total[a]-act_times[i][a], 122-len(group_members[i])))
+                if p < 0.05:
+                    maybe_event[i][a] = p
+                    activities[i].append(a)
+    return maybe_event, activities
 
 
 def zscore_calculator(x1, y1, x2, y2):
@@ -336,6 +313,15 @@ def write_attributes(filename, attributes, group_member, n, list_label):
                         for i in attr:
                             file.write(str(i) + ',')
                         file.write('\n')
+
+
+def write_pvalue(filename, maybe_event, activities):
+    with open(filename, 'wb') as file:
+        for i in range(len(activities)):
+            file.write('Group ' + str(i) + ' sequential pattern that less than 0.05:\n')
+            for a in activities[i]:
+                file.write(str(maybe_event[i][a])+ ' ' +a + '\n')
+            file.write('\n\n')
 
 
 def show_kmeans(kmeans, reduced_data):
@@ -420,7 +406,7 @@ def show_kmedoid(M, C, reduced_data):
 
 
 if __name__ == "__main__":
-    numberOfClusters = 4
+    numberOfClusters = 3
     attributes, ids, list_label, attributes_complete = read_attributes('attributes_05.15.2017.csv')
 
     #group_members, kmeans, reduced_data = kmeans(attributes, ids, n = numberOfClusters)
@@ -431,4 +417,5 @@ if __name__ == "__main__":
     write_attributes('attributes.csv', attributes_complete, group_members, n = numberOfClusters, list_label=list_label)
 
     act_times, acts = do_ngram(filename='122traces_02.27.17.csv', group_members = group_members)
-    significant_test(act_times, acts)
+    maybe_event, activities = significant_test(act_times, acts, group_members)
+    write_pvalue('pvalue.csv', maybe_event, activities)
