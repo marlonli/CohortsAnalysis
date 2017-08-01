@@ -956,8 +956,8 @@ if __name__ == "__main__":
 
 
     ### for kmedoid and kmeans, change by commenting each other
-    #group_members, kmeans, reduced_data = kmeans(attributes, ids, n = numberOfClusters)
-    group_members, M, C, reduced_data = kmedoid(attributes, ids, n= numberOfClusters)
+    group_members, kmeans, reduced_data = kmeans(attributes, ids, n = numberOfClusters)
+    #group_members, M, C, reduced_data = kmedoid(attributes, ids, n= numberOfClusters)
 
 
     ### write the attributes
