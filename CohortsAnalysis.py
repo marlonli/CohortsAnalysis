@@ -853,7 +853,7 @@ def random_pick_up(members, number_each_group):
 
 
 def silhouette(X):
-    range_n_clusters = [2, 3, 4, 5, 6, 7, 8, 9]
+    range_n_clusters = [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 
     for n_clusters in range_n_clusters:
         # Create a subplot with 1 row and 2 columns
@@ -948,16 +948,16 @@ if __name__ == "__main__":
     ### read attributes with weights
     #AGE_Group	Male_1	Transfer	Stat	Attending	Blunt	Penetrating	Animal Bite	Burn	Blunt/No Injury	Non-critical admission
     # Critical Admission	Discharged	ETA_Now	Weekend	Intubation	Daytime	GCS>13	ISS Group	AIS_HEAD_NECK	AIS_FACE	AIS_CHEST	AIS_ABD_PELVIC	AIS_EXTREMITIE	AIS_EXTERNAL	Maximum AIS
-    weights = [2, 5, 3, 1, 3, 1, 176, 4, 4, 164, 2, 1,
-               75, 3, 2, 5, 3, 4, 1, 1, 1, 3, 1, 1, 4, 3]
+    weights = [2, 2, 2, 3, 23, 4, 37, 31, 7, 35, 3, 8,
+               13, 15, 4, 19, 2, 21, 2, 3, 25, 19, 1, 4, 4, 21]
     attributes, ids, list_label, attributes_all = read_attributes_weight('attributes_05.15.2017.csv', weights)
 
 
 
 
     ### for kmedoid and kmeans, change by commenting each other
-    group_members, kmeans, reduced_data = kmeans(attributes, ids, n = numberOfClusters)
-    #group_members, M, C, reduced_data = kmedoid(attributes, ids, n= numberOfClusters)
+    # group_members, kmeans, reduced_data = kmeans(attributes, ids, n = numberOfClusters)
+    group_members, M, C, reduced_data = kmedoid(attributes, ids, n= numberOfClusters)
 
 
     ### write the attributes
@@ -982,7 +982,6 @@ if __name__ == "__main__":
     ### plot radar chart according to the attributes
     radar(list_label[2:], result_no_id)
     plt.show()
-
 
     silhouette(reduced_data)
     '''
