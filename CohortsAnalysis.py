@@ -14,7 +14,7 @@ from math import pi
 import random
 from sklearn.metrics import silhouette_samples, silhouette_score
 import matplotlib.cm as cm
-
+import gap
 
 def read_attributes(filename):
     ids = []
@@ -939,6 +939,14 @@ def silhouette(X):
                      fontsize=14, fontweight='bold')
         plt.show()
 
+def elbow(data):
+    range_n_clusters = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    for n_clusters  in range_n_clusters:
+        clusterer = KMeans(n_clusters=n_clusters, random_state=10).fit(data)
+        # print (clusterer.cluster_centers_)
+        centroids = clusterer.cluster_centers_
+        print (centroids)
+
 if __name__ == "__main__":
     numberOfClusters = 3
 
@@ -958,7 +966,6 @@ if __name__ == "__main__":
     ### for kmedoid and kmeans, change by commenting each other
     # group_members, kmeans, reduced_data = kmeans(attributes, ids, n = numberOfClusters)
     group_members, M, C, reduced_data = kmedoid(attributes, ids, n= numberOfClusters)
-
 
     ### write the attributes
     result, result_no_id = write_attributes('attributes.csv', attributes_all, group_members, n = numberOfClusters, list_label=list_label)
@@ -980,10 +987,31 @@ if __name__ == "__main__":
     maybe_event, activities = significant_test(act_times, acts, group_members)
 
     ### plot radar chart according to the attributes
-    radar(list_label[2:], result_no_id)
-    plt.show()
+    # radar(list_label[2:], result_no_id)
+    # plt.show()
 
-    silhouette(reduced_data)
+    ### elbow method
+    elbow(reduced_data)
+
+    ### pip install gapkmean
+    ### Utilizing gap statistics to find the optimal number of clusters
+    # gaps, s_k, K = gap.gap_statistic(np.array(reduced_data), refs=None, B=10, K=range(1,11), N_init = 10)
+    # bestKValue = gap.find_optimal_k(gaps, s_k, K)
+    # x = []
+    # y = []
+    # for j in range(len(reduced_data)):
+    #     x.append(reduced_data[j][0])
+    #     y.append(reduced_data[j][1])
+
+    # plt.figure(10, figsize=(5, 5))
+    # plt.plot(x,y,"o")
+    # plt.show()
+    # for i in range(len(s_k)):
+    #     print(float(gaps[i]) - float(s_k[i]))
+    # print(bestKValue)
+
+    ### Utilizing sihouette to find the optimal number of clusters
+    # silhouette(reduced_data)
     '''
     ### random pich 123 / 3 = 41 groups of patients
     number_each_group = 3

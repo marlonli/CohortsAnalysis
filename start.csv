@@ -1,0 +1,139 @@
+Start Time
+Group 0 activities' duration:
+Pt arrival                p-value: -1.000    avg:0.000s     std: 0.000
+L-spine-BK                p-value: 0.003     avg:616.835s   std: 210.253
+Visual inspection-LLE     p-value: 0.012     avg:487.626s   std: 249.511
+T-spine-BK                p-value: 0.013     avg:603.324s   std: 219.851
+L DP/PT-PC                p-value: 0.074     avg:203.554s   std: 230.485
+Palpation-LLE             p-value: 0.090     avg:488.616s   std: 255.533
+Verbal assessment-AA      p-value: 0.092     avg:95.217s    std: 76.745
+Rectal-BK                 p-value: 0.136     avg:623.000s   std: 268.114
+Visual inspection-G       p-value: 0.146     avg:396.429s   std: 127.208
+Palpation-NE              p-value: 0.165     avg:388.500s   std: 217.495
+Visual assessment-AA      p-value: 0.167     avg:87.048s    std: 59.150
+R DP/PT-PC                p-value: 0.175     avg:186.895s   std: 218.380
+C-spine-BK                p-value: 0.183     avg:486.975s   std: 207.973
+Log roll-BK               p-value: 0.201     avg:593.097s   std: 262.784
+Visual inspection-C       p-value: 0.202     avg:339.908s   std: 135.375
+Visual inspection-NE      p-value: 0.250     avg:389.488s   std: 208.708
+Right pupil-PU            p-value: 0.278     avg:166.701s   std: 76.688
+Visual inspection-BK      p-value: 0.292     avg:585.633s   std: 251.653
+Palpation-RLE             p-value: 0.296     avg:493.190s   std: 253.444
+Visual inspection-N       p-value: 0.299     avg:317.857s   std: 136.532
+Total Verbalized-GCS      p-value: 0.319     avg:192.021s   std: 149.249
+Visual inspection-M       p-value: 0.323     avg:349.597s   std: 185.216
+Palpation-RUE             p-value: 0.372     avg:535.222s   std: 400.998
+Palpation-C               p-value: 0.424     avg:345.184s   std: 159.585
+Visual inspection-A       p-value: 0.435     avg:379.975s   std: 180.913
+Visual inspection-LUE     p-value: 0.454     avg:518.095s   std: 317.362
+Pt departure              p-value: 0.460     avg:1559.529s  std: 607.017
+Visual inspection-RLE     p-value: 0.462     avg:502.400s   std: 262.010
+Chest Auscultation-BA     p-value: 0.480     avg:208.143s   std: 365.256
+L visual inspection-EY    p-value: 0.522     avg:377.857s   std: 363.941
+R visual inspection-EY    p-value: 0.532     avg:546.000s   std: 503.718
+R Visual inspection-EAR   p-value: 0.556     avg:370.333s   std: 217.371
+Visual inspection-RUE     p-value: 0.593     avg:513.298s   std: 345.596
+Visual inspection-F       p-value: 0.640     avg:329.452s   std: 185.950
+Visual inspection-H       p-value: 0.662     avg:403.275s   std: 301.271
+L Visual inspection-EAR   p-value: 0.709     avg:381.290s   std: 196.831
+Palpation-F               p-value: 0.733     avg:325.792s   std: 172.590
+Palpation-LUE             p-value: 0.749     avg:500.688s   std: 303.857
+Left pupil-PU             p-value: 0.813     avg:183.139s   std: 104.628
+Palpation-H               p-value: 0.829     avg:402.689s   std: 303.532
+L otoscopy-EAR            p-value: 0.852     avg:374.657s   std: 181.991
+Stability-PE              p-value: 0.861     avg:394.294s   std: 127.944
+Palpation-A               p-value: 0.863     avg:394.165s   std: 200.495
+R otoscopy-EAR            p-value: 0.987     avg:343.753s   std: 182.246
+
+Group 1 activities' duration:
+Pt arrival                p-value: -1.000    avg:0.000s     std: 0.000
+L-spine-BK                p-value: 0.001     avg:509.305s   std: 147.038
+T-spine-BK                p-value: 0.005     avg:514.828s   std: 150.089
+Palpation-F               p-value: 0.025     avg:295.182s   std: 146.685
+Visual inspection-M       p-value: 0.039     avg:291.256s   std: 105.459
+Rectal-BK                 p-value: 0.043     avg:520.267s   std: 153.873
+Palpation-NE              p-value: 0.047     avg:318.095s   std: 135.452
+Visual inspection-BK      p-value: 0.064     avg:526.029s   std: 224.688
+L visual inspection-EY    p-value: 0.083     avg:611.273s   std: 515.911
+Log roll-BK               p-value: 0.104     avg:515.591s   std: 254.239
+Visual inspection-NE      p-value: 0.105     avg:337.417s   std: 140.754
+Visual inspection-C       p-value: 0.115     avg:383.545s   std: 243.841
+Visual inspection-N       p-value: 0.120     avg:281.488s   std: 100.847
+L DP/PT-PC                p-value: 0.134     avg:140.658s   std: 97.051
+Visual inspection-LLE     p-value: 0.140     avg:561.828s   std: 385.156
+Palpation-C               p-value: 0.161     avg:386.179s   std: 246.230
+Pt departure              p-value: 0.171     avg:1440.023s  std: 345.188
+Verbal assessment-AA      p-value: 0.172     avg:69.647s    std: 67.573
+R DP/PT-PC                p-value: 0.195     avg:140.864s   std: 93.531
+Visual inspection-F       p-value: 0.213     avg:316.895s   std: 194.594
+Stability-PE              p-value: 0.229     avg:372.250s   std: 127.502
+Visual assessment-AA      p-value: 0.274     avg:71.952s    std: 64.199
+Right pupil-PU            p-value: 0.317     avg:184.000s   std: 121.385
+R Visual inspection-EAR   p-value: 0.329     avg:435.652s   std: 360.849
+Visual inspection-LUE     p-value: 0.355     avg:478.333s   std: 278.622
+Total Verbalized-GCS      p-value: 0.384     avg:164.567s   std: 71.395
+C-spine-BK                p-value: 0.442     avg:451.020s   std: 172.793
+Visual inspection-RLE     p-value: 0.450     avg:495.826s   std: 313.733
+Palpation-LLE             p-value: 0.559     avg:530.057s   std: 370.797
+Chest Auscultation-BA     p-value: 0.563     avg:170.286s   std: 243.925
+Visual inspection-A       p-value: 0.569     avg:400.506s   std: 248.325
+Palpation-RLE             p-value: 0.616     avg:497.398s   std: 327.768
+Palpation-RUE             p-value: 0.647     avg:500.341s   std: 352.169
+Visual inspection-H       p-value: 0.661     avg:421.110s   std: 342.135
+Visual inspection-G       p-value: 0.675     avg:424.861s   std: 184.560
+R visual inspection-EY    p-value: 0.690     avg:536.636s   std: 447.508
+R otoscopy-EAR            p-value: 0.702     avg:335.119s   std: 152.845
+Visual inspection-RUE     p-value: 0.827     avg:495.849s   std: 349.415
+L otoscopy-EAR            p-value: 0.869     avg:373.400s   std: 173.711
+L Visual inspection-EAR   p-value: 0.878     avg:393.923s   std: 163.591
+Palpation-LUE             p-value: 0.882     avg:490.382s   std: 287.940
+Palpation-H               p-value: 0.901     avg:409.475s   std: 323.152
+Left pupil-PU             p-value: 0.924     avg:180.132s   std: 114.672
+Palpation-A               p-value: 0.993     avg:391.712s   std: 240.298
+
+Group 2 activities' duration:
+Pt arrival                p-value: -1.000    avg:0.000s     std: 0.000
+Palpation-F               p-value: 0.000     avg:450.308s   std: 209.136
+Palpation-RLE             p-value: 0.011     avg:643.429s   std: 331.212
+Visual inspection-RLE     p-value: 0.012     avg:642.276s   std: 328.139
+Visual inspection-F       p-value: 0.013     avg:417.484s   std: 210.183
+Visual inspection-G       p-value: 0.016     avg:588.000s   std: 278.451
+Stability-PE              p-value: 0.027     avg:487.000s   std: 224.664
+Palpation-LLE             p-value: 0.034     avg:650.955s   std: 327.505
+Visual inspection-LLE     p-value: 0.036     avg:667.095s   std: 329.308
+Visual inspection-M       p-value: 0.100     avg:415.364s   std: 179.551
+R visual inspection-EY    p-value: 0.194     avg:270.167s   std: 134.919
+Visual inspection-BK      p-value: 0.224     avg:631.526s   std: 196.912
+L visual inspection-EY    p-value: 0.233     avg:263.143s   std: 127.286
+C-spine-BK                p-value: 0.261     avg:401.100s   std: 153.177
+Pt departure              p-value: 0.298     avg:1694.700s  std: 479.072
+Visual inspection-N       p-value: 0.339     avg:350.571s   std: 160.297
+Palpation-RUE             p-value: 0.397     avg:440.647s   std: 256.004
+Palpation-NE              p-value: 0.422     avg:408.308s   std: 197.924
+Palpation-C               p-value: 0.429     avg:325.190s   std: 147.373
+Rectal-BK                 p-value: 0.430     avg:663.000s   std: 214.217
+R Visual inspection-EAR   p-value: 0.470     avg:290.250s   std: 136.225
+L DP/PT-PC                p-value: 0.491     avg:137.111s   std: 46.960
+Visual inspection-NE      p-value: 0.501     avg:407.615s   std: 197.709
+Visual inspection-RUE     p-value: 0.523     avg:447.467s   std: 257.727
+R otoscopy-EAR            p-value: 0.524     avg:377.400s   std: 185.938
+L otoscopy-EAR            p-value: 0.538     avg:411.200s   std: 188.418
+L Visual inspection-EAR   p-value: 0.543     avg:467.500s   std: 55.500
+Verbal assessment-AA      p-value: 0.573     avg:70.800s    std: 32.326
+Visual assessment-AA      p-value: 0.601     avg:71.846s    std: 27.856
+Visual inspection-A       p-value: 0.641     avg:416.231s   std: 203.235
+Log roll-BK               p-value: 0.654     avg:597.769s   std: 208.031
+Visual inspection-C       p-value: 0.673     avg:340.619s   std: 152.321
+Total Verbalized-GCS      p-value: 0.742     avg:160.250s   std: 66.436
+Palpation-LUE             p-value: 0.750     avg:472.062s   std: 252.664
+Palpation-A               p-value: 0.750     avg:374.214s   std: 167.700
+Visual inspection-LUE     p-value: 0.769     avg:527.214s   std: 284.450
+Chest Auscultation-BA     p-value: 0.781     avg:165.909s   std: 248.120
+Left pupil-PU             p-value: 0.801     avg:174.154s   std: 53.903
+R DP/PT-PC                p-value: 0.821     avg:158.364s   std: 70.331
+T-spine-BK                p-value: 0.837     avg:579.958s   std: 188.555
+Right pupil-PU            p-value: 0.843     avg:179.143s   std: 59.662
+L-spine-BK                p-value: 0.850     avg:583.400s   std: 191.216
+Palpation-H               p-value: 0.873     avg:415.321s   std: 267.645
+Visual inspection-H       p-value: 0.980     avg:411.893s   std: 288.998
+
